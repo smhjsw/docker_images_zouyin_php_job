@@ -11,6 +11,8 @@ RUN apt-get install -y libpng-dev
 RUN apt-get install -y libjpeg-dev
 RUN apt-get install -y libgmp-dev
 
+RUN apt-get -y --force-yes install yasm ffmpeg
+
 RUN docker-php-ext-install pdo_mysql
 RUN docker-php-ext-install bcmath
 RUN docker-php-ext-configure gd --with-jpeg-dir=/usr/include/
